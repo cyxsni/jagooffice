@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jago Office</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <h1>Jago Office</h1>
+                </div>
+                <ul class="nav-links">
+                  <li><a href="#">Home</a></li>
+                  <li class="dropdown">
+                      <a href="#">Tutorial ▼</a>
+                      <ul class="submenu">
+                          <li><a href="msword.html">MS Word</a></li>
+                          <li><a href="msexcel.html">MS Excel</a></li>
+                          <li><a href="mspp.html">MS PowerPoint</a></li>
+                          <li><a href="msaccess.html">MS Access</a></li>
+                      </ul>
+                  </li>
+                  <li><a href="aboutUs.html">About Us</a></li>
+              </ul>
+            </div>
+        </nav>
+    </header>
+
+<!-- Hero Section -->
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Jago Office</h1>
+                <p>Belajar Office dengan mudah.</p>
+            </div>
+            <div class="hero-image">
+                <img src="assets/off.png" alt="Hero Image">
+            </div>
+        </div>
+    </div>
+    <div class="scroll-down">
+        <span></span>
+    </div>
+</section>
+
+
+
+    <!-- Animated Categories Section -->
+     <br>
+    <h2 class="section-title">Kategori Belajar</h2>
+    <br>
+    <section class="categories">
+        <div class="container">
+            <div class="category-cards">
+                <div class="category-card">
+                    <img src="wd.png" alt="Microsoft Word" class="category-image">
+                    <h3>Microsoft Word</h3>
+                    <p>Eksplorasi Fitur Tab Menu di Microsoft Word</p>
+                    <button onclick="window.location.href='tabmenuword.html'" class="category-btn">Read More</button>
+                </div>
+                <div class="category-card">
+                    <img src="ec.png" alt="Microsoft Excel" class="category-image">
+                    <h3>Microsoft Excel</h3>
+                    <p>Eksplorasi Fitur Tab Menu di Microsoft Excel</p>
+                    <button onclick="window.location.href='tabmenuexcel.html'" class="category-btn">Read More</button>
+                </div>
+                <div class="category-card">
+                    <img src="pt.png" alt="Microsoft PowerPoint" class="category-image">
+                    <h3>Microsoft PowerPoint</h3>
+                    <p>Eksplorasi Fitur Tab Menu di Microsoft PowerPoint</p>
+                    <button onclick="window.location.href='tabmenupp.html'" class="category-btn">Read More</button>
+                </div>
+                <div class="category-card">
+                    <img src="acs.png" alt="Microsoft Access" class="category-image">
+                    <h3>Microsoft Access</h3>
+                    <p>Eksplorasi Fitur Tab Menu di Microsoft Access</p>
+                    <button onclick="window.location.href='tabmenuaccess.html'" class="category-btn">Read More</button>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+   <!-- Call to Action Section -->
+<section class="cta">
+    <div class="container">
+        <h2>Pengen Makin Jago? Yuk Gabung di Komunitas Kami!</h2>
+        <a href="https://chat.whatsapp.com/EJAd8vbwzkXISJqDzZZ6uS" class="btn-secondary">Mulai Sekarang</a>
+    </div>
+</section>
+
+        <!-- Comment Section -->
+        <section class="comments">
+          <div class="container">
+              <h2>Request ide keren<br>
+                kamu disini!</h2>
+              <form id="commentForm">
+                  <div class="form-group">
+                      <label for="name">Nama:</label>
+                      <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required>
+                  </div>
+                  <div class="form-group">
+                      <label for="email">Email:</label>
+                      <input type="email" id="email" name="email" placeholder="Masukkan email Anda" required>
+                  </div>
+                  <div class="form-group">
+                      <label for="comment">Komentar:</label>
+                      <textarea id="comment" name="comment" rows="5" placeholder="Tulis Request Anda di sini" required></textarea>
+                  </div>
+                  <button type="submit" class="btn-primary">Kirim Request</button>
+              </form>
+              
+              <div id="commentsList" class="comments-list">
+                <!-- Komentar akan ditampilkan di sini -->
+            </div>
+              
+          </div>
+      </section>
+      <script>
+        let comments = []; // Inisialisasi array komentar di tingkat global
+    
+        // Function to save comments to localStorage
+        function saveCommentsToLocalStorage() {
+            localStorage.setItem("comments", JSON.stringify(comments));
+        }
+    
+        // Function to load comments from localStorage
+        function loadCommentsFromLocalStorage() {
+            const storedComments = localStorage.getItem("comments");
+            comments = storedComments ? JSON.parse(storedComments) : [];
+        }
+    
+        // Function to display comments
+        function displayComments() {
+            const commentsList = document.getElementById("commentsList");
+            commentsList.innerHTML = ""; // Clear existing comments
+            comments.forEach((comment, index) => {
+                const commentDiv = document.createElement("div");
+                commentDiv.classList.add("comment");
+    
+                // Add content to the comment
+                commentDiv.innerHTML = `
+                    <h4>${comment.name}</h4>
+                    <p>${comment.comment}</p>
+                    <button class="delete-btn" data-index="${index}">Hapus</button>
+                `;
+    
+                // Add the new comment to the list
+                commentsList.appendChild(commentDiv);
+            });
+    
+            // Add event listeners to delete buttons
+            const deleteButtons = document.querySelectorAll(".delete-btn");
+            deleteButtons.forEach(button => {
+                button.addEventListener("click", function () {
+                    const index = this.getAttribute("data-index");
+                    deleteComment(index);
+                });
+            });
+        }
+    
+        // Function to delete a comment
+        function deleteComment(index) {
+            if (confirm("Apakah Anda yakin ingin menghapus komentar ini?")) {
+                comments.splice(index, 1); // Remove the comment at the specified index
+                saveCommentsToLocalStorage(); // Save updated comments to localStorage
+                displayComments(); // Refresh the displayed comments
+            }
+        }
+    
+        // Handle form submission
+        document.getElementById("commentForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+    
+            // Get input values
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value; // Email can be stored if needed, not displayed
+            const comment = document.getElementById("comment").value;
+    
+            // Create a new comment object
+            const newComment = { name, email, comment };
+    
+            // Add the new comment to the comments array
+            comments.push(newComment);
+    
+            // Save updated comments to localStorage
+            saveCommentsToLocalStorage();
+    
+            // Display updated comments
+            displayComments();
+    
+            // Clear the form
+            document.getElementById("commentForm").reset();
+        });
+    
+        // Load comments from localStorage on page load
+        loadCommentsFromLocalStorage();
+        displayComments();
+    </script>
+ 
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 The Mavericks. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="#"><img src="facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="instagram.png" alt="Instagram"></a>
+        </div>
+    </footer>
+
+    <!-- Include External JS for animations (optional) -->
+    <script src="script.js"></script>
+</body>
+</html>

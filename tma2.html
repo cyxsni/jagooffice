@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belajar Microsoft Access: Pengenalan Dasar untuk Pemula</title>
+  <style>
+   
+    body {
+      font-family: sans-serif;
+      background-color: #f8fafc;
+      margin: 0;
+      padding: 0;
+    }
+    p {
+      font-size: 25px;
+      
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      color: #334155;
+    }
+    h1 {
+      font-size: 20px;
+      color: #334155;
+    }
+    .dua {
+      font-size: 20px;
+      text-align: justify;
+    }
+    .container {
+  display: flex;
+  flex-direction: column; /* Menambahkan ini untuk membuat artikel dan sidebar menjadi kolom */
+  padding: 10px;
+  margin-top: 50px;
+  border-radius: 20px;
+}
+.sidebar {
+  width: 95%; /* Lebar sidebar */
+  padding: 40px;
+  margin-top: 20px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.article {
+  width: 95%; /* Lebar artikel */
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.article-cover {
+  width: 50%; /* Membuat gambar mengisi lebar penuh */
+  height: auto; /* Menjaga proporsi gambar */
+  border-radius: 20px 20px 0 0; /* Memberikan efek sudut melengkung pada bagian atas gambar */
+}
+    .article-title {
+      font-size: 25px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .article-content {
+      margin-bottom: 20px;
+    }
+    .sidebar-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .sidebar-item {
+      margin-bottom: 10px;
+    }
+    .sidebar-item-title {
+      font-weight: bold;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+    .sidebar-item-title:hover {
+      color: #1e3a8a;
+    }
+    .sidebar-item-content {
+      margin-top: 5px;
+    }
+    .article-image {
+  width: 500px; /* Lebar gambar ditentukan dalam piksel */
+  height: auto;
+}
+    /* Navbar */
+    .navbar {
+    background-color: #004d40;
+    color: white;
+    padding:  0;
+    position:fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+    .cont {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    .nav-links li {
+      position: relative;
+    }
+    .nav-links li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+    .logo {
+      font-size: 25px;
+      color: white;
+    }
+    /* Dropdown Submenu */
+    .dropdown:hover .submenu {
+      display: block;
+    }
+    .submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #004d40;
+      list-style: none;
+      padding: 10px 0;
+    }
+    .submenu li {
+      width: 200px;
+    }
+    .submenu li a {
+      display: block;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: white;
+    }
+    .submenu li a:hover {
+      background-color: #00897b;
+    }
+
+    footer {
+  background-color: #004d40;
+  color: white;
+  text-align: center;
+  padding: 0.5rem 0; /* Mengurangi padding */
+  font-size: 0.85rem; /* Mengurangi ukuran font */
+  margin-top: 20px;
+  max-width: 100%; /* Menetapkan lebar maksimum untuk footer */
+  margin: 0 auto; /* Memusatkan footer */
+}
+
+.tiga {
+  color: #ffffff;
+  font-size: 20px;
+}
+
+  </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="cont">
+                <div class="logo">
+                    <p class="logo">Jago Office</p>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                    <a href="#">Tutorial ▼</a>
+                    <ul class="submenu">
+                        <li><a href="msword.html">MS Word</a></li>
+                        <li><a href="msexcel.html">MS Excel</a></li>
+                        <li><a href="mspp.html">MS PowerPoint</a></li>
+                        <li><a href="msaccess.html">MS Access</a></li>
+                    </ul>
+                </li>
+                <li><a href="aboutUs.html">About Us</a></li>
+                </ul>
+                
+                </div>
+            </div>
+        </nav>
+    </header>
+  <div class="container">
+    <div class="article">
+      <h1 class="article-title">Belajar Microsoft Access: Pengenalan Dasar untuk Pemula</h1>
+         
+          <div class="article-content">
+            <br> <br> 
+            <p class="dua">Apa itu Microsoft Access ?</p>
+                <p class="dua"><strong>Microsoft Access </strong> merupakan program database yang cukup populer, mudah digunakan,
+                    berorientasi visual dan berbasis Windows serta dapat diintegrasikan dengan aplikasi
+                    lain terutama Visual Basic.
+                    </p>
+                    <p class="dua">Fungsi Umum Microsoft Access</p>
+            <p class="dua"><ul>
+                <li class="satu">Untuk membuat database</li>
+                <li class="satu">Untuk membuat program aplikasi berbasis desktop</li>
+            </ul> </p>
+
+            <p class="dua">Komponen Access</p>
+            <p class="dua">
+              <ol>
+                  <li class="satu">Tables, adalah objek database yang digunakan sebagai sarana untuk menyimpan data yang telah diolah.</li>
+                  <li class="satu">Form, adalah objek database yang digunakan untuk memasukkan dan mengedit data atau informasi yang ada dalam suatu database dengan menggunakan bentuk tampilan formulir.</li>
+                  <li class="satu">Independensi Data: Data dapat diubah tanpa mempengaruhi aplikasi yang menggunakannya.</li>
+                  <li class="satu">Report, adalah objek database yang digunakan untuk menampilkan data atau informasi dalam bentuk laporan.</li>
+                  <li class="satu">Queries, adalah objek database yang berfungsi untuk menampilkan, menyunting dan menyaring suatu data sesuai dengan kriteria yang diinginkan serta dapat memasukkan suatu expresi.</li>
+                  <li class="satu">Macros, adalah rangkaian perintah yang dapat disimpan dan dijalankan secara otomatis, misalnya membuka form, mencetak laporan di layar, dan lain-lain.</li>
+                  <li class="satu">Moduls, adalah program kecil atau procedur yang kegunaannya adalah untuk perancangan modul aplikasi pengolahan database tingkat lanjut.</li>
+              </ol>
+          </p>
+
+            <p class="dua">Tipe Data di Access</p>
+            <ol> 
+                <li class="satu">Text: Tipe data ini digunakan untuk menyimpan teks atau huruf. Cocok untuk nama, alamat, atau informasi lain yang berbentuk kata-kata. Panjang maksimum untuk tipe data ini adalah 255 karakter.</li>   
+                <li class="satu">Memo: Jika kamu perlu menyimpan teks yang lebih panjang, seperti deskripsi atau catatan, gunakan tipe data ini. Memo dapat menampung hingga 65.535 karakter, jadi sangat berguna untuk informasi yang lebih rinci..</li>
+                <li class="satu">Number: Tipe ini digunakan untuk menyimpan angka. Cocok untuk data yang memerlukan perhitungan, seperti jumlah, harga, atau nilai. Ada beberapa subtipe dalam Number, seperti Integer dan Double, yang berbeda dalam kapasitas dan jenis angka yang bisa disimpan.</li>
+                <li class="satu">Date/Time: Seperti namanya, tipe data ini digunakan untuk menyimpan informasi tanggal dan waktu. Misalnya, kamu bisa mencatat tanggal lahir, tanggal transaksi, atau waktu kejadian.</li>
+                <li class="satu">Currency: Tipe data ini khusus untuk menyimpan angka yang berkaitan dengan uang. Dengan menggunakan tipe ini, kamu bisa melakukan perhitungan dengan lebih tepat, karena Access menghindari kesalahan pembulatan yang sering terjadi pada tipe data angka biasa.</li>
+                <li class="satu">AutoNumber: Ini adalah tipe data yang sangat berguna untuk membuat nomor unik secara otomatis setiap kali kamu menambahkan data baru. Biasanya digunakan sebagai ID untuk setiap record dalam tabel, sehingga tidak perlu repot-repot mengatur nomor manual.</li>
+                <li class="satu">Yes/No: Tipe data ini sangat sederhana, hanya memiliki dua pilihan: "Ya" atau "Tidak". Cocok untuk pertanyaan yang hanya memerlukan jawaban biner, seperti apakah suatu produk tersedia atau tidak.</li>
+                <li class="satu">OLE Object: Tipe data ini digunakan untuk menyimpan objek dari aplikasi lain, seperti gambar, dokumen, atau file audio. Misalnya, kamu bisa menyimpan foto produk langsung di database.</li>
+                <li class="satu">Hyperlink: Jika kamu ingin menyimpan URL atau link ke situs web, tipe data ini adalah pilihan yang tepat. Dengan hyperlink, kamu bisa langsung mengakses halaman web hanya dengan mengklik link tersebut.</li>
+                <li class="satu">Attachment: Tipe ini memungkinkan kamu untuk menyimpan berbagai jenis file dalam satu record, seperti dokumen, gambar, atau spreadsheet. Ini sangat berguna untuk mengelola dokumen yang terkait dengan data tertentu.</li>
+                <li class="satu">Calculated: Tipe data ini memungkinkan kamu untuk menyimpan hasil perhitungan yang didasarkan pada data lain dalam tabel. Misalnya, kamu bisa menghitung total harga berdasarkan jumlah dan harga per unit.</li>
+                <li class="satu">Lookup Wizard: Tipe data ini membantu kamu untuk membuat daftar pilihan dari tabel lain atau dari daftar yang sudah ada. Ini memudahkan pengguna dalam memilih nilai tanpa harus mengetiknya manual, sehingga mengurangi kesalahan input.</li>
+            </ol>
+
+            <p class="dua">Primary Key dan Foreign Key</p>
+            <ul>
+                <li class="satu">Primary Key
+                    <p class="satu">Tabel memiliki primary key, yaitu suatu atribut yang tidak hanya mengidentifikasi secara unik suatu kejadian tetapi juga mewakili setiap kejadian dari suatu entitas.
+                        Contoh :
+                        NIM dalam tabel Mahasiswa merupakan nilai unik yang tidak mungkin bersifat ganda. Karena setiap
+                        mahasiswa memiliki NIM yang berbeda antara mahasiswa yang satu dengan mahasiswa yang lain.
+                        </p>
+                </li>
+                <li class="satu">Foreign Key
+                    <p class="satu">Foreign key adalah atribut yang melengkapi relationship dan menunjukkan hubungan antara tabel induk dengan tabel anak. Foreign key ditempatkan pada tabel anak. 
+                        </p>
+                </li>
+            </ul>
+
+            <p class="dua">Jenis- Jenis Relasional</p>
+            <ol>
+                <li class="satu">One-To-One (1-1)
+                    <p class="satu">Mempunyai pengertian "Setiap baris data pada tabel pertama dihubungkan hanya ke satu baris data pada tabel ke dua". Contohnya : relasi antara tabel mahasiswa dan tabel data pribadi. Satu baris mahasiswa hanya berhubungan dengan satu baris data pribadi begitu juga sebaliknya.
+                        Contoh relasi one-to-one</p>
+                        <img src="tma/a2.png" alt="Access" class="article-image"> <br> <br>
+                </li>
+                <li class="satu">One-To-Many (1-N)
+                    <p class="satu">Mempunyai pengertian "Setiap baris data dari tabel pertama dapat dihubungkan ke satu baris atau lebih data pada tabel ke dua". Contohnya : relasi perwalian antara tabel dosen dan tabel mahasiswa. Satu baris dosen atau satu dosen bisa berhubungan dengan satu baris atau lebih mahasiswa.</p>
+                        <img src="tma/a3.png" alt="Access" class="article-image"> <br> <br>
+                </li>
+                <li class="satu">Many-To-Many (N-M)
+                    <p class="satu">Mempunyai pengertian "Satu baris atau lebih data pada tabel pertama bisa dihubungkan ke satu atau lebih baris data pada tabel ke dua". Artinya ada banyak baris di tabel satu dan tabel dua yang saling berhubungan satu sama lain.
+                        Contohnya : relasi antar tabel mahasiswa dan tabel mata kuliah. Satu baris mahasiswa bisa berhubungan dengan banyak baris mata kuliah begitu juga sebaliknya.
+                        </p>
+                        <img src="tma/a4.png" alt="Access" class="article-image">
+                </li>
+            </ol>
+
+        </div>
+    </div>
+
+    <div class="sidebar">
+      <h2 class="sidebar-title">Artikel Terkait</h2>
+      <div class="sidebar-item">
+          <a href="tms3.html" class="sidebar-item-title">Belajar Microsoft Access: Membuat Tabel</a>
+          </div>
+      <div class="sidebar-item">
+          <a href="tma4.html" class="sidebar-item-title">Belajar Microsoft Access: Membuat Form di Microsoft Access untuk Pemula</a>
+          </div>
+  </div>
+  </div>
+  <footer>
+    <p class="tiga"> &copy; 2024 The Mavericks. All rights reserved.</p>
+  </footer>
+</body>
+</html>

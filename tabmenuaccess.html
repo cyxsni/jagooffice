@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eksplorasi Fitur Tab Menu di Microsoft Access
+</title>
+<style>
+    body {
+      font-family: sans-serif;
+      background-color: #f8fafc;
+      margin: 0;
+      padding: 0;
+    }
+    p {
+      font-size: 50px;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      color: #334155;
+    }
+    h1 {
+      font-size: 80px;
+      color: #334155;
+    }
+    .dua {
+        font-size: 25px;
+        text-align: justify;
+    }
+    .container {
+      display: flex;
+      justify-content: space-between;
+      padding: 25px;
+    }
+    .article {
+      width: 68%; /* Mengubah lebar untuk memberi ruang lebih pada sidebar */
+      padding: 40px;
+      background-color: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    .sidebar {
+      width: 25%; /* Mengatur lebar sidebar */
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    .article-title {
+      font-size: 55px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .article-content {
+      margin-bottom: 20px;
+    }
+    .sidebar-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .sidebar-item {
+      margin-bottom: 10px;
+    }
+    .sidebar-item-title {
+      font-weight: bold;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+    .sidebar-item-title:hover {
+      color: #1e3a8a;
+    }
+    .sidebar-item-content {
+      margin-top: 5px;
+    }
+    .article-image {
+      width: 70%; /* Memastikan gambar mengisi lebar artikel */
+      height: auto;
+      
+    }
+    
+
+/* Navbar */
+.navbar {
+    background-color: #004d40;
+    color: white;
+    padding: 8px 0px; /* Reduced padding */
+}
+
+.cont {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+.logo {
+    font-size: 25px;
+    color: white;
+}
+/* Dropdown Submenu */
+.dropdown:hover .submenu {
+    display: block;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #004d40;
+    list-style: none;
+    padding: 10px 0;
+}
+
+.submenu li {
+    width: 200px;
+}
+
+.submenu li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.submenu li a:hover {
+    background-color: #00897b;
+}
+
+.satu {
+        font-size: 18px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: #334155;
+        text-align: justify;
+}
+
+footer {
+  background-color: #004d40;
+  color: white;
+  text-align: center;
+  padding: 0.5rem 0; /* Mengurangi padding untuk membuatnya lebih kecil */
+  font-size: 0.85rem; /* Mengurangi ukuran font */
+  margin-top: 20px; /* Menambahkan margin agar ada sedikit ruang antara footer dan konten utama */
+  
+}
+
+.tiga {
+  color: #ffffff;
+  font-size: 20px;
+}
+
+    
+  </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="cont">
+                <div class="logo">
+                    <p class="logo">Jago Office</p>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                    <a href="#">Tutorial ▼</a>
+                    <ul class="submenu">
+                        <li><a href="msword.html">MS Word</a></li>
+                        <li><a href="msexcel.html">MS Excel</a></li>
+                        <li><a href="mspp.html">MS PowerPoint</a></li>
+                        <li><a href="msaccess.html">MS Access</a></li>
+                    </ul>
+                </li>
+                <li><a href="aboutUs.html">About Us</a></li>
+                </ul>
+                
+                </div>
+            </div>
+        </nav>
+    </header>
+  <div class="container">
+    <div class="article">
+      <h1 class="article-title">Eksplorasi Fitur Tab Menu di Microsoft Access</h1>
+      
+      <div class="article-content">
+
+        <p class="dua">Microsoft Access adalah aplikasi perangkat lunak dari Microsoft yang digunakan untuk membuat dan mengelola basis data (database). Microsoft Access adalah bagian dari Microsoft Office, dan memungkinkan pengguna untuk menyimpan, mengatur, dan menganalisis data dalam format yang terstruktur. Dengan Access, Anda dapat dengan mudah membuat aplikasi basis data berbasis desktop tanpa memerlukan banyak keahlian pemrograman.</p>
+        
+        <img src="tms/tabmenuaccess.png" alt="Excel" class="article-image">
+        <p class="dua">1.	Quick Access Toolbar </p>
+        <p class="dua">Atau Bilah Alat Akses Cepat adalah fitur yang ada di bagian atas jendela aplikasi Microsoft Access. Bagian ini berisi kumpulan perintah yang sering digunakan, seperti menyimpan, membatalkan, dan mengulangi tindakan. Anda bisa menyesuaikan perintah-perintah ini sesuai kebutuhan.</p>
+        <p class="dua">2.	Tab Menu </p>
+        <p class="dua">Bagian ini berisi tab-tab yang berisi berbagai perintah yang terorganisir berdasarkan kategori. Misalnya, tab "Home" berisi perintah untuk mengedit teks, memformat, dan menyalin data. Memudahkan Anda menemukan perintah yang Anda butuhkan karena sudah dikelompokkan berdasarkan kategori.</p>
+        <p class="dua">3.	Control jendela</p>
+        <p class="dua">Bagian ini berisi tombol-tombol untuk mengontrol tampilan jendela aplikasi, seperti meminimalkan, memaksimalkan, dan menutup jendela. Memungkinkan untuk mengatur tampilan jendela sesuai dengan preferensi Anda.</p>
+        <p class="dua">4.	Clipboard</p>
+        <p class="dua">Clipboard adalah area penyimpanan sementara yang digunakan untuk menyimpan data yang telah Anda salin (copy) atau potong (cut). Data yang disimpan di clipboard dapat berupa teks, gambar, atau bahkan objek database seperti tabel atau query.</p>
+        <ul>
+            <li class="satu">Cut (Potong): Berfungsi untuk Menghapus data yang dipilih dari lokasi asalnya dan menyalinnya ke clipboard.</li>
+            <li class="satu">Copy (Salin): Berfungsi untuk  Menyalin data yang dipilih ke clipboard tanpa menghapus data asli.</li>
+            <li class="satu">Paste (Tempel): Berfungsi untuk Menempelkan data yang ada di clipboard ke lokasi yang Anda inginkan.</li>
+            <li class="satu">Format Painter: Berfungsi untuk Menyalin format dari satu bagian data ke bagian data lainnya</li>
+        </ul>
+        <p class="dua">5.	Sort & Filter </p>
+        <p class="dua">adalah fitur yang berguna dalam Microsoft Access untuk mengatur dan menyaring data dalam tabel Anda.</p>
+        <ul>
+            <li class="satu">Ascending (Urutkan Naik): Berfungsi untuk Mengurutkan data dalam kolom yang dipilih dari nilai terkecil ke nilai terbesar (untuk data numerik) atau dari A ke Z (untuk data teks).</li>
+            <li class="satu">Descending (Urutkan Turun) : Berfungsi untuk Kebalikan dari Sort Ascending, yaitu mengurutkan data dari nilai terbesar ke terkecil atau dari Z ke A.</li>
+            <li class="satu">Selection (Berdasarkan Pilihan) : Berfungsi untuk Memungkinkan Anda membuat filter berdasarkan nilai yang dipilih dalam kolom tertentu. Misalnya, Anda ingin menampilkan hanya data dengan nilai "Jakarta" pada kolom "Kota".</li>
+            <li class="satu">Advanced (Tingkat Lanjut): Berfungsi untuk Memberikan opsi yang lebih fleksibel untuk membuat filter, seperti menggabungkan beberapa kriteria atau menggunakan ekspresi.</li>
+        </ul>
+        <p class="dua">6.	Records </p>
+        <p class="dua">dalam Microsoft Access adalah sebuah baris data lengkap dalam sebuah tabel.</p>
+        <ul>
+            <li class="satu">Refresh All : Menerapkan kembali semua filter, kriteria pencarian, atau perubahan tampilan yang sedang aktif.</li>
+            <li class="satu">New : Berfungsi untuk Menambahkan rekaman baru pada akhir tabel. Ketika Anda mengklik tombol ini, akan muncul baris kosong di bawah rekaman terakhir, siap untuk Anda isi dengan data baru.</li>
+            <li class="satu">Save : Berfungsi untuk Menyimpan perubahan yang telah Anda buat pada data. Ini sangat penting untuk memastikan data Anda tidak hilang.</li>
+            <li class="satu">Totals : Berfungsi untuk  Menampilkan baris total untuk kolom-kolom numerik dalam tampilan lembar data. Ini berguna untuk melihat ringkasan data, seperti jumlah total, rata-rata, atau jumlah maksimum dan minimum.</li>
+            <li class="satu">Spelling: Berfungsi untuk Memeriksa ejaan pada data yang dipilih. Fitur ini sangat berguna untuk memastikan data Anda bebas dari kesalahan pengetikan.</li>
+            <li class="satu">Delete : Berfungsi untuk Menghapus rekaman yang dipilih. Harap berhati-hati saat menggunakan fitur ini, karena data yang dihapus tidak dapat dikembalikan dengan mudah.</li>
+            <li class="satu">More  : Berfungsi untuk Menampilkan menu dropdown yang berisi opsi tambahan untuk mengelola rekaman.</li>
+        
+        </ul>
+        <p class="dua">7.	Find </p>
+        <p class="dua">Digunakan untuk mencari teks atau nilai tertentu dalam sebuah tabel. Ketika Anda mengklik ikon ini, biasanya akan muncul kotak dialog yang meminta Anda untuk memasukkan kata atau frasa yang ingin Anda cari.</p>
+        <ul>
+            <li class="satu">Replace : Berfungsi untuk Digunakan untuk mengganti semua kemunculan teks atau nilai yang ditemukan dengan teks atau nilai yang baru.</li>
+            <li class="satu">Go To : Berfungsi untuk Memungkinkan Anda berpindah langsung ke rekaman tertentu dalam tabel.</li>
+            <li class="satu">Select : Berfungsi untuk Memungkinkan Anda memilih rentang data dalam tabel. </li>
+        </ul>
+        <p class="dua">8.	Group </p>
+        <p class="dua">Terdiri dari group font :</p>
+        <ul>
+            <li class="satu">Font: Memilih jenis font yang akan digunakan. </li>
+            <li class="satu">Ukuran Font: Mengatur ukuran font, biasanya dalam satuan poin. </li>
+            <li class="satu">Warna Font: Mengubah warna teks. </li>
+            <li class="satu">Gaya Font: Mengatur gaya font seperti tebal (bold), miring (italic), dan garis bawah (underline).</li>
+        </ul>
+            <p class="dua">Terdiri dari Group Aligment :</p>
+        <ul>    
+            <li class="satu">Rata Kiri: Menyelaraskan teks ke sisi kiri. </li>
+            <li class="satu">Pusat: Menyelaraskan teks ke tengah. </li>
+            <li class="satu">Rata Kanan: Menyelaraskan teks ke sisi kanan. </li>
+            <li class="satu">Justify: Menyelaraskan teks rata kiri dan kanan, mengisi seluruh lebar paragraf</li>
+        
+        </ul>
+        <br> <br> <br>
+        
+    </div>
+    </div>
+    <div class="sidebar">
+      <h2 class="sidebar-title">Artikel Terkait</h2>
+      <div class="sidebar-item">
+        <a href="tma1.html" class="sidebar-item-title">Belajar Microsoft Access: Pengenalan Dasar tentang Database</a>
+      </div>
+      <div class="sidebar-item">
+        <a href="tma2.html" class="sidebar-item-title">Belajar Microsoft Access: Pengenalan Dasar untuk Pemula</a>
+      </div>
+      <div class="sidebar-item">
+        <a href="tma3.html" class="sidebar-item-title">Belajar Microsoft Access: Membuat Tabel</a>
+      </div>
+      <div class="sidebar-item">
+        <a href="tma4.html" class="sidebar-item-title">Belajar Microsoft Access: Membuat Form di Microsoft Access untuk Pemula</a>
+      </div>
+      <div class="sidebar-item">
+      <a href="tma5.html" class="sidebar-item-title">Belajar Microsoft Access: Membuat dan Menyimpan Query untuk Pengelolaan Data</a>
+      </div>
+      <div class="sidebar-item">
+        <a href="tma6.html" class="sidebar-item-title">Belajar Microsoft Access: Memahami dan Menggunakan Macros</a>
+      </div>
+      <div class="sidebar-item">
+        <a href="tma7.html" class="sidebar-item-title">Belajar Microsoft Access: Cara Membuat Report</a>
+      </div>
+      <div class="sidebar-item">
+        <a href="tma8.html" class="sidebar-item-title">Belajar Microsoft Access: Cara Membuat Switchboard</a>
+      </div>
+</div>
+</div>
+<footer>
+  <p class="tiga"> &copy; 2024 The Mavericks. All rights reserved.</p>
+</footer>
+</body>
+</html>

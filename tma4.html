@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belajar Microsoft Access: Membuat Form di Microsoft Access untuk Pemula</title>
+  <style>
+   
+    body {
+      font-family: sans-serif;
+      background-color: #f8fafc;
+      margin: 0;
+      padding: 0;
+    }
+    p {
+      font-size: 25px;
+      
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      color: #334155;
+    }
+    h1 {
+      font-size: 20px;
+      color: #334155;
+    }
+    .dua {
+      font-size: 20px;
+      text-align: justify;
+    }
+    .container {
+  display: flex;
+  flex-direction: column; /* Menambahkan ini untuk membuat artikel dan sidebar menjadi kolom */
+  padding: 10px;
+  margin-top: 50px;
+  border-radius: 20px;
+}
+.sidebar {
+  width: 95%; /* Lebar sidebar */
+  padding: 40px;
+  margin-top: 20px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.article {
+  width: 95%; /* Lebar artikel */
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.article-cover {
+  width: 50%; /* Membuat gambar mengisi lebar penuh */
+  height: auto; /* Menjaga proporsi gambar */
+  border-radius: 20px 20px 0 0; /* Memberikan efek sudut melengkung pada bagian atas gambar */
+}
+    .article-title {
+      font-size: 25px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .article-content {
+      margin-bottom: 20px;
+    }
+    .sidebar-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .sidebar-item {
+      margin-bottom: 10px;
+    }
+    .sidebar-item-title {
+      font-weight: bold;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+    .sidebar-item-title:hover {
+      color: #1e3a8a;
+    }
+    .sidebar-item-content {
+      margin-top: 5px;
+    }
+    .article-image {
+  width: 500px; /* Lebar gambar ditentukan dalam piksel */
+  height: auto;
+}
+    /* Navbar */
+    .navbar {
+    background-color: #004d40;
+    color: white;
+    padding:  0;
+    position:fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+    .cont {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    .nav-links li {
+      position: relative;
+    }
+    .nav-links li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+    .logo {
+      font-size: 25px;
+      color: white;
+    }
+    /* Dropdown Submenu */
+    .dropdown:hover .submenu {
+      display: block;
+    }
+    .submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #004d40;
+      list-style: none;
+      padding: 10px 0;
+    }
+    .submenu li {
+      width: 200px;
+    }
+    .submenu li a {
+      display: block;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: white;
+    }
+    .submenu li a:hover {
+      background-color: #00897b;
+    }
+
+    footer {
+  background-color: #004d40;
+  color: white;
+  text-align: center;
+  padding: 0.5rem 0; /* Mengurangi padding */
+  font-size: 0.85rem; /* Mengurangi ukuran font */
+  margin-top: 20px;
+  max-width: 100%; /* Menetapkan lebar maksimum untuk footer */
+  margin: 0 auto; /* Memusatkan footer */
+}
+
+.tiga {
+  color: #ffffff;
+  font-size: 20px;
+}
+
+  </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="cont">
+                <div class="logo">
+                    <p class="logo">Jago Office</p>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                    <a href="#">Tutorial ▼</a>
+                    <ul class="submenu">
+                        <li><a href="msword.html">MS Word</a></li>
+                        <li><a href="msexcel.html">MS Excel</a></li>
+                        <li><a href="mspp.html">MS PowerPoint</a></li>
+                        <li><a href="msaccess.html">MS Access</a></li>
+                    </ul>
+                </li>
+                <li><a href="aboutUs.html">About Us</a></li>
+                </ul>
+                
+                </div>
+            </div>
+        </nav>
+    </header>
+  <div class="container">
+    <div class="article">
+      <h1 class="article-title">Belajar Microsoft Access: Membuat Form di Microsoft Access untuk Pemula</h1>
+         
+          <div class="article-content">
+            <br> <br> 
+            <p class="dua"><strong>Form di Microsoft Access</strong> adalah alat yang digunakan untuk memasukkan, mengedit, dan menampilkan data dalam basis data dengan cara yang lebih user-friendly. Formulir memungkinkan pengguna untuk berinteraksi dengan data tanpa harus berurusan langsung dengan tabel, sehingga lebih mudah untuk mengelola informasi.</p>
+            <p class="dua">Untuk membuat form, klik create pilih form design/ form wizard</p>
+            <img src="tma/a11.png" alt="Access" class="article-image">
+            <p class="dua"><ul>
+                <li class="satu">Form di Microsoft Access adalah tampilan data dari tabel yang dirancang khusus untuk memudahkan pengguna dalam memasukkan, mengedit, dan menampilkan data.</li>
+                <li class="satu">Form Design digunakan untuk merancang dan mendesain tampilan form. Kamu dapat menentukan letak, ukuran, dan format kontrol data, seperti kotak teks, kotak centang, dan tombol, dalam form ini.</li>
+                <li class="satu">Blank Form adalah form kosong tanpa kontrol data yang memungkinkan kamu untuk menambahkan dan mengatur kontrol data sesuai kebutuhan kamu.</li>
+                <li class="satu">Form Wizard adalah alat yang membantu kamu membuat form dengan cepat. Kamu tinggal memilih tabel yang ingin kamu tampilkan dalam form, dan Form Wizard akan otomatis membuat form yang sesuai dengan pilihan kamu.</li>
+                <li class="satu">Navigation digunakan untuk berpindah antar form, laporan, dan tabel dalam database. Fitur ini membantu kamu menavigasi database dengan mudah dan efisien.</li>
+                <li class="satu">More Forms menampilkan daftar semua form yang telah kamu buat. Kamu dapat memilih form yang ingin kamu buka, edit, atau hapus dari daftar ini.</li>
+            </ul> </p>
+
+            <p class="dua">Isikan sesuai kebutuhan</p>
+            <img src="tma/a12.png" alt="Access" class="article-image">
+
+            <p class="dua">Simpan form dengan nama yang diinginkan.</p>
+            <img src="tma/a13.png" alt="Access" class="article-image">
+
+            <p class="dua">Contoh tampilan Form Mahasiswa</p>
+            <img src="tma/a14.png" alt="Access" class="article-image">
+        </div>
+    </div>
+
+    <div class="sidebar">
+      <h2 class="sidebar-title">Artikel Terkait</h2>
+      <div class="sidebar-item">
+          <a href="tma5.html" class="sidebar-item-title">Belajar Microsoft Access: Membuat dan Menyimpan Query untuk Pengelolaan Data</a>
+          </div>
+      <div class="sidebar-item">
+          <a href="tma6.html" class="sidebar-item-title">Belajar Microsoft Access: Memahami dan Menggunakan Macros</a>
+          </div>
+  </div>
+  </div>
+  <footer>
+    <p class="tiga"> &copy; 2024 The Mavericks. All rights reserved.</p>
+  </footer>
+</body>
+</html>

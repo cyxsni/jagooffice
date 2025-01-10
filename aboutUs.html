@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jago Office</title>
+    <link rel="stylesheet" href="styleaboutus.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body, h1, h2, h3, p, a {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f8fafc;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #004d40;
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 10px 15px;
+            transition: color 0.3s, background-color 0.3s;
+        }
+
+        .nav-links li a:hover {
+            color: #00bfa5;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Dropdown dan Submenu */
+.dropdown {
+    position: relative;
+}
+
+.dropdown .submenu {
+    display: none;
+    position: absolute;
+    top: 100%; /* Submenu tepat di bawah menu utama */
+    left: 0;
+    background-color: #004d40;
+    list-style: none;
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 200px; /* Menyesuaikan lebar submenu jika diperlukan */
+}
+
+.dropdown:hover .submenu {
+    display: block;
+}
+
+.submenu li a {
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.submenu li a:hover {
+    background-color: #00897b;
+}
+
+
+        /* Main Section */
+        main {
+            margin-top: 120px;
+            text-align: center;
+        }
+
+        .description-box {
+            background-color: #e0f2f1;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 800px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .description-box p {
+            font-size: 1rem;
+            color: #004d40;
+        }
+
+        .team {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 10px auto;
+            max-width: 600px;
+        }
+
+        footer {
+            background-color: #004d40;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <h1>Jago Office</h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#">Tutorial ▼</a>
+                        <ul class="submenu">
+                            <li><a href="msword.html">MS Word</a></li>
+                            <li><a href="msexcel.html">MS Excel</a></li>
+                            <li><a href="mspp.html">MS PowerPoint</a></li>
+                            <li><a href="msaccess.html">MS Access</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="aboutUs.html">About Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Description Box -->
+        <div class="description-box">
+            <p>
+                Selamat datang di Jago Office, platform belajar Microsoft Office yang dirancang untuk memudahkan Sobat Jago Office menguasai aplikasi-aplikasi seperti Word, Excel, PowerPoint dan Access. Kami berkomitmen untuk memberikan panduan praktis dan jelas bagi pelajar, profesional, maupun pemula. Website ini lahir dari kebutuhan untuk menyediakan materi belajar Microsoft Office yang mudah diakses dan dipahami oleh semua kalangan. Kami berharap dapat membantu Sobat Jago Office meningkatkan keterampilan digital yang dimiliki.
+            </p>
+        </div>
+
+        
+        <p class="dua">Meet The Mavericks team</p>
+
+        <div class="team">
+            <h2>Alfina Choerunnisa</h2>
+            <p>Team Member</p>
+        </div>
+        <div class="team">
+            <h2>Isni Trianita</h2>
+            <p>Team Member</p>
+        </div>
+        <div class="team">
+            <h2>Melisa Wahyuningsih</h2>
+            <p>Team Member</p>
+        </div>
+
+        <div class="team">
+            <h2>Putri Maharani</h2>
+            <p>Team Member</p>
+        </div>
+
+        <div class="team">
+            <h2>Ita Ristiani</h2>
+            <p>Team Member</p>
+        </div>
+
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2024 The Mavericks. All rights reserved.</p>
+    </footer>
+</body>
+</html>

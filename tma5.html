@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belajar Microsoft Access: Membuat dan Menyimpan Query untuk Pengelolaan Data</title>
+  <style>
+   
+    body {
+      font-family: sans-serif;
+      background-color: #f8fafc;
+      margin: 0;
+      padding: 0;
+    }
+    p {
+      font-size: 25px;
+      
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      color: #334155;
+    }
+    h1 {
+      font-size: 20px;
+      color: #334155;
+    }
+    .dua {
+      font-size: 20px;
+      text-align: justify;
+    }
+    .container {
+  display: flex;
+  flex-direction: column; /* Menambahkan ini untuk membuat artikel dan sidebar menjadi kolom */
+  padding: 10px;
+  margin-top: 50px;
+  border-radius: 20px;
+}
+.sidebar {
+  width: 95%; /* Lebar sidebar */
+  padding: 40px;
+  margin-top: 20px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.article {
+  width: 95%; /* Lebar artikel */
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.article-cover {
+  width: 50%; /* Membuat gambar mengisi lebar penuh */
+  height: auto; /* Menjaga proporsi gambar */
+  border-radius: 20px 20px 0 0; /* Memberikan efek sudut melengkung pada bagian atas gambar */
+}
+    .article-title {
+      font-size: 25px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .article-content {
+      margin-bottom: 20px;
+    }
+    .sidebar-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .sidebar-item {
+      margin-bottom: 10px;
+    }
+    .sidebar-item-title {
+      font-weight: bold;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+    .sidebar-item-title:hover {
+      color: #1e3a8a;
+    }
+    .sidebar-item-content {
+      margin-top: 5px;
+    }
+    .article-image {
+  width: 500px; /* Lebar gambar ditentukan dalam piksel */
+  height: auto;
+}
+    /* Navbar */
+    .navbar {
+    background-color: #004d40;
+    color: white;
+    padding:  0;
+    position:fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+    .cont {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    .nav-links li {
+      position: relative;
+    }
+    .nav-links li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+    .logo {
+      font-size: 25px;
+      color: white;
+    }
+    /* Dropdown Submenu */
+    .dropdown:hover .submenu {
+      display: block;
+    }
+    .submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #004d40;
+      list-style: none;
+      padding: 10px 0;
+    }
+    .submenu li {
+      width: 200px;
+    }
+    .submenu li a {
+      display: block;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: white;
+    }
+    .submenu li a:hover {
+      background-color: #00897b;
+    }
+
+    footer {
+  background-color: #004d40;
+  color: white;
+  text-align: center;
+  padding: 0.5rem 0; /* Mengurangi padding */
+  font-size: 0.85rem; /* Mengurangi ukuran font */
+  margin-top: 20px;
+  max-width: 100%; /* Menetapkan lebar maksimum untuk footer */
+  margin: 0 auto; /* Memusatkan footer */
+}
+
+.tiga {
+  color: #ffffff;
+  font-size: 20px;
+}
+
+  </style></head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="cont">
+                <div class="logo">
+                    <p class="logo">Jago Office</p>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                    <a href="#">Tutorial ▼</a>
+                    <ul class="submenu">
+                        <li><a href="msword.html">MS Word</a></li>
+                        <li><a href="msexcel.html">MS Excel</a></li>
+                        <li><a href="mspp.html">MS PowerPoint</a></li>
+                        <li><a href="msaccess.html">MS Access</a></li>
+                    </ul>
+                </li>
+                <li><a href="aboutUs.html">About Us</a></li>
+                </ul>
+                
+                </div>
+            </div>
+        </nav>
+    </header>
+  <div class="container">
+    <div class="article">
+      <h1 class="article-title">Belajar Microsoft Access: Membuat dan Menyimpan Query untuk Pengelolaan Data</h1>
+         
+          <div class="article-content">
+            <br> <br> 
+            <p class="dua"><strong>Query</strong> adalah sarana untuk mengatur data yang disimpan dalam tabel, sehingga hanya data-data tertentu yang akan dimunculkan dalam tabel.</p>
+            <p class="dua">Query bisa diartikan sebagai pernyataan /permintaan yang diberikan oleh user untuk mengambil informasi yang
+                tersimpan dalam database. Fungsi dari Query adalah untuk menyaring dan menampilkan data dari berbagai criteria dan urutan yang kita kehendaki.
+                </p>
+            
+            <p class="dua">Cara membuat query ada 3 yaitu:</p>                
+                <p class="dua">
+              <ul>
+                  <li class="satu">Create query in design view</li>
+                  <li class="satu">Create query by using wizard</li>
+                  <li class="satu">SQL View</li>
+             </ul>
+          </p>
+
+            <p class="dua">Query dibedakan menjadi 3, yaitu :</p>
+            <ul> 
+                <li class="satu">DDL ( Data Definition Language ) digunakan untuk membuat atau mendefinisikan obyek-obyek
+                    database seperti membuat tabel, relasi antar tabel dan sebagainya.
+                    </li>   
+                <li class="satu">DML ( Data Manipulation Language ) digunakan untuk manipulasi database, seperti : menambah,
+                    mengubah atau menghapus data serta mengambil informasi yang diperlukan dari database.
+                    </li>
+                <li class="satu">DCL ( Data Control Language ) merupakan sub bahasa SQL yang digunakan untuk melakukan
+                    pengontrolan data dan server databasenya.
+                    </li>
+            </ul>
+
+            <p class="dua">Untuk membuat query, klik tab create dan pilih query wizard atau query design</p>
+            <img src="tma/a15.png" alt="Access" class="article-image">
+            <ul>
+                <li class="satu">Query Wizard: Query Wizard adalah alat bantu yang mudah digunakan untuk membuat kueri tanpa harus menulis kode SQL. Kamu cukup memilih tabel yang ingin kamu kueri dan kolom yang ingin kamu tampilkan, dan Query Wizard akan membuat kueri untukmu.</li>
+                <li class="satu">Query Design: Query Design adalah alat yang lebih canggih yang memungkinkan kamu untuk membuat kueri yang lebih kompleks. Kamu dapat menentukan kriteria yang lebih rumit, seperti kriteria yang melibatkan beberapa tabel atau kriteria yang menggunakan fungsi agregat.</li> 
+             </ul>
+
+            <p class="dua">Query dengan SQL View</p>
+            <p class="dua">SELECT</p>
+            <p class="dua">Perintah SQL untuk menampilkan data memiliki cara penulisan sebagai
+                berikut :
+                SELECT * | [ kolom1,kolom2,...] FROM <nama table> [ WHERE <kondisi>];
+                </p>
+            <ul>
+                <li class="satu">SELECT artinya memilih kolom atau field mana yang akan ditampilkan dapat berupa list
+                    kolom, suatu persamaan (operasi aritmatika), fungsi, obyek tertentu. 
+                    </li>
+                <li class="satu">Dapat diketikkan * yang artinya menampilkan semua field yang dimiliki oleh table tersebut</li>
+                <li class="satu">FROM menunjukkan nama Tabel yang akan ditampilkan.</li>
+                <li class="satu">WHERE untuk meletakkan definisi kondisi penyaringan</li>
+            </ul>
+
+            <p class="dua">Berikut contoh query dan perintah SQL untuk penyelesaiannya</p>
+            <ol>
+                <li class="satu">Query : Tampilkan semua kolom yang ada pada table pegawai
+                    SELECT * FROM pegawai;
+                    </li>
+                <li class="satu">Query : Tampilkan kode buku dan judulnya
+                    SELECT kodebuku, judul FROM buku;
+                    </li> 
+                <li class="satu">Query : tampilkan nama semua anggota yang berinisialisasi JONI
+                    SELECT * FROM anggota WHERE nama LIKE ‘JONI%’;
+                    </li>
+            </ol>
+
+            <p class="dua">Wildcard Pada Accees</p>
+            <ol>
+                <li class="satu">1.	Asterisk (*): Wildcard ini digunakan untuk mewakili nol atau lebih karakter.
+                    Contoh: Jika kamu mencari "a*", hasilnya akan mencakup semua kata yang dimulai dengan huruf "a", seperti "apple", "ant", dan "aroma".
+                    </li>
+                <li class="satu">2.	Question Mark (?): Wildcard ini digunakan untuk mewakili satu karakter tunggal.
+                    Contoh: Jika kamu mencari "b?g", hasilnya akan mencakup kata-kata seperti "bag", "big", atau "bug", tetapi tidak termasuk "baggage" karena ada lebih dari satu karakter di antara "b" dan "g".
+                    </li>
+                <li class="satu">3.	Brackets ([]): Wildcard ini digunakan untuk menentukan satu karakter dari sekumpulan karakter yang diizinkan.
+                    Contoh: Jika kamu mencari "[aeiou]", hasilnya akan mencakup semua huruf vokal tunggal: "a", "e", "i", "o", "u".
+                    </li>
+                <li class="satu">4.	Exclamation Mark (!): Digunakan di dalam tanda kurung untuk menunjukkan karakter yang tidak diinginkan.
+                    Contoh: Jika kamu mencari "[!aeiou]", hasilnya akan mencakup semua karakter yang bukan huruf vokal, seperti "b", "c", "d", dan seterusnya.
+                    </li>
+                <li class="satu">5.	Hyphen (-): Digunakan di dalam tanda kurung untuk menunjukkan rentang karakter.
+                    Contoh: Jika kamu mencari "[a-z]", hasilnya akan mencakup semua huruf kecil dari "a" hingga "z".
+                    </li>
+                <li class="satu">6.	Hash (#): Wildcard ini digunakan untuk mewakili satu karakter numerik.
+                    Contoh: Jika kamu mencari "##", hasilnya akan mencakup semua kombinasi dua digit angka, seperti "12", "45", atau "99".
+                    </li>
+            </ol>
+
+            <p class="dua">Langkah membuat Query</p>  
+            <p class="dua">Data Mobil</p>  
+            <img src="tma/a16.png" alt="Access" class="article-image">
+
+            <p class="dua">Data Transaksi</p>  
+            <img src="tma/a17.png" alt="Access" class="article-image">
+
+            <p class="dua">Query</p> 
+            <p class="dua">Perintah: Tampilkan semua data mobil dan transaksii</p> 
+
+            <p class="dua">Query</p>  
+            <img src="tma/a18.png" alt="Access" class="article-image">
+
+            <p class="dua">Query</p>  
+            <img src="tma/a19.png" alt="Access" class="article-image">
+
+            <p class="dua">Query</p>  
+            <img src="tma/a20.png" alt="Access" class="article-image">
+
+            <p class="dua">Proses Pembuatan Query</p>  
+            <img src="tma/a21.png" alt="Access" class="article-image">
+
+            <p class="dua">Hasil Query</p>  
+            <img src="tma/a22.png" alt="Access" class="article-image">
+
+            <p class="dua">Melihat Perintah SQL</p>  
+            <p class="dua">Klik kanan pada Query1 lalu pilih SQL View</p>  
+            <img src="tma/a23.png" alt="Access" class="article-image">
+
+            <p class="dua">Melihat Perintah SQL</p>  
+            <img src="tma/a24.png" alt="Access" class="article-image">
+
+            <p class="dua">Query dengan Kriteria Perintah</p>  
+            <p class="dua">Tampilkan data mobil avanza</p>  
+            <img src="tma/a25.png" alt="Access" class="article-image">
+
+            <p class="dua">Hasil Query dengan Kriteria</p>  
+            <img src="tma/a26.png" alt="Access" class="article-image">
+
+            <p class="dua">Menyimpan Query</p>  
+            <img src="tma/a27.png" alt="Access" class="article-image">
+        </div>
+    </div>
+
+    <div class="sidebar">
+      <h2 class="sidebar-title">Artikel Terkait</h2>
+      <div class="sidebar-item">
+          <a href="tma6.html" class="sidebar-item-title">Belajar Microsoft Access: Memahami dan Menggunakan Macros</a>
+          </div>
+      <div class="sidebar-item">
+          <a href="tma7.html" class="sidebar-item-title">Belajar Microsoft Access: Cara Membuat Report</a>
+          </div>
+  </div>
+  </div>
+  <footer>
+    <p class="tiga"> &copy; 2024 The Mavericks. All rights reserved.</p>
+  </footer>
+</body>
+</html>

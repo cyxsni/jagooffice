@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PENGGUNAAN FUNGSI UPPER, LOWER, PROPER & TRIM</title>
+  <style>
+   
+    body {
+      font-family: sans-serif;
+      background-color: #f8fafc;
+      margin: 0;
+      padding: 0;
+    }
+    p {
+      font-size: 25px;
+      
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      color: #334155;
+    }
+    h1 {
+      font-size: 20px;
+      color: #334155;
+    }
+    .dua {
+      font-size: 20px;
+      text-align: justify;
+    }
+    .container {
+  display: flex;
+  flex-direction: column; /* Menambahkan ini untuk membuat artikel dan sidebar menjadi kolom */
+  padding: 10px;
+  margin-top: 50px;
+  border-radius: 20px;
+}
+.sidebar {
+  width: 95%; /* Lebar sidebar */
+  padding: 40px;
+  margin-top: 20px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.article {
+  width: 95%; /* Lebar artikel */
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.article-cover {
+  width: 50%; /* Membuat gambar mengisi lebar penuh */
+  height: auto; /* Menjaga proporsi gambar */
+  border-radius: 20px 20px 0 0; /* Memberikan efek sudut melengkung pada bagian atas gambar */
+}
+    .article-title {
+      font-size: 25px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .article-content {
+      margin-bottom: 20px;
+    }
+    .sidebar-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .sidebar-item {
+      margin-bottom: 10px;
+    }
+    .sidebar-item-title {
+      font-weight: bold;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+    .sidebar-item-title:hover {
+      color: #1e3a8a;
+    }
+    .sidebar-item-content {
+      margin-top: 5px;
+    }
+    .article-image {
+  width: 500px; /* Lebar gambar ditentukan dalam piksel */
+  height: auto;
+}
+    /* Navbar */
+    .navbar {
+    background-color: #004d40;
+    color: white;
+    padding:  0;
+    position:fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+    .cont {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    .nav-links li {
+      position: relative;
+    }
+    .nav-links li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+    .logo {
+      font-size: 25px;
+      color: white;
+    }
+    /* Dropdown Submenu */
+    .dropdown:hover .submenu {
+      display: block;
+    }
+    .submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #004d40;
+      list-style: none;
+      padding: 10px 0;
+    }
+    .submenu li {
+      width: 200px;
+    }
+    .submenu li a {
+      display: block;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: white;
+    }
+    .submenu li a:hover {
+      background-color: #00897b;
+    }
+
+    footer {
+  background-color: #004d40;
+  color: white;
+  text-align: center;
+  padding: 0.5rem 0; /* Mengurangi padding */
+  font-size: 0.85rem; /* Mengurangi ukuran font */
+  margin-top: 20px;
+  max-width: 100%; /* Menetapkan lebar maksimum untuk footer */
+  margin: 0 auto; /* Memusatkan footer */
+}
+
+.tiga {
+  color: #ffffff;
+  font-size: 20px;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+        <div class="cont">
+            <div class="logo">
+                <p class="logo">Jago Office</p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                <a href="#">Tutorial ▼</a>
+                <ul class="submenu">
+                    <li><a href="msword.html">MS Word</a></li>
+                    <li><a href="msexcel.html">MS Excel</a></li>
+                    <li><a href="mspp.html">MS PowerPoint</a></li>
+                    <li><a href="msaccess.html">MS Access</a></li>
+                </ul>
+            </li>
+            <li><a href="aboutUs.html">About Us</a></li>
+            </ul>           
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="container">
+  <div class="article">
+    <h1 class="article-title">Belajar Microsoft Excel: Penggunaan Fungsi Upper, Lower, Proper & Trim</h1>
+    
+    <div class="article-content">
+      <p class="dua">Tutorial ini akan menjelaskan langkah-langkah penggunaan keempat fungsi tersebut, sehingga Anda dapat mengolah data teks dengan lebih efisien. Mari kita mulai!</p>
+      
+      <p>Fungsi UPPER</p>
+      <p class="dua">Fungsi UPPER digunakan untuk mengubah semua huruf dalam teks menjadi huruf besar (kapital). </p>
+      <p class="dua">1. Pilih sel tempat yang akan menampilkan huruf menjadi besar.</p>
+      <p class="dua">2. Ketik rumus =UPPER( lalu pilih rentang sel yang berisi data yang ingin dihitung, misalnya B3</p>
+      <p class="dua">3.	Lengkapi rumus dengan menutup kurung dan tekan Enter. Contoh lengkapnya: =UPPER(Q9:Q2O)</p>
+      <img src="image/e24.png" alt="Excel" class="article-image">
+      <p class="dua">4.	Hasil penggunaan fungsi UPPER </p>
+      <img src="image/e25.png" alt="Excel" class="article-image">
+      
+      <br> <br> <br>
+
+      <p>Fungsi LOWER</p>
+      <p class="dua">Fungsi LOWER  digunakan untuk mengubah semua huruf dalam teks menjadi huruf kecil</p> 
+      <p class="dua">1.	Pilih sel tempat yang akan menampilkan huruf menjadi kecil </p>
+      <p class="dua">2.	Ketik rumus =LOWER( lalu pilih rentang sel yang berisi data yang ingin dihitung, misalnya B3</p>
+      <p class="dua">3.	Lengkapi rumus dengan menutup kurung dan tekan Enter. Contoh lengkapnya: =LOWER(B3)</p>
+      <img src="image/e26.png" alt="Excel" class="article-image">
+      <p class="dua">4. Hasil penggunaan fungsi LOWER</p>
+      <img src="image/e27.png" alt="Excel" class="article-image">
+      <br> <br> <br>
+      
+      <p>Fungsi PROPER</p>
+      <p class="dua">Fungsi PROPER digunakan untuk mengubah huruf pertama setiap kata dalam teks menjadi huruf kapital, sedangkan huruf lainnya menjadi kecil.</p>
+      <p class="dua">1.	Pilih sel tempat yang akan menampilkan huruf kapital pada setiap kata menjadi kecil.</p>
+      <p class="dua">2.	Ketik rumus =PROPER( lalu pilih rentang sel yang berisi data yang ingin dihitung, misalnya B3</p>
+      <p class="dua">3.	Lengkapi rumus dengan menutup kurung dan tekan Enter. Contoh lengkapnya: =PROPER(B3)</p>
+      <img src="image/e28.png" alt="Excel" class="article-image">
+      <p class="dua">4. Hasil penggunaan fungsi PROPER</p>
+      <img src="image/e29.png" alt="Excel" class="article-image">
+      <br> <br> <br>
+
+      <p>Fungsi TRIM</p>
+      <p class="dua">Fungsi TRIM digunakan untuk menghapus spasi berlebih di awal, akhir, dan di antara teks, kecuali satu spasi antar kata.</p>
+      <p class="dua">1.	Pilih sel tempat yang akan menampilkan hasil penggunaan TRIM.</p>
+      <p class="dua">2.	Ketik rumus =TRIM( lalu pilih rentang sel yang berisi data yang ingin dihitung, misalnya B3</p>
+      <p class="dua">3.	Lengkapi rumus dengan menutup kurung dan tekan Enter. Contoh lengkapnya: =TRIM(B3)</p>
+      <img src="image/e30.png" alt="Excel" class="article-image">
+      <p class="dua">4. Hasil penggunaan fungsi TRIM</p>
+      <img src="image/e31.png" alt="Excel" class="article-image">
+      <br> <br> <br>
+
+  </div>
+  </div>
+  <div class="sidebar">
+    <h2 class="sidebar-title">Artikel Terkait</h2>
+    <div class="sidebar-item">
+        <a href="tme1.html" class="sidebar-item-title">Belajar Microsoft Excel: Penggunaan Fungsi Sum dan Average
+        </a>
+        </div>
+    <div class="sidebar-item">
+        <a href="tme2.html" class="sidebar-item-title">Belajar Microsoft Excel: Penggunaan Fungsi MAX dan MIN
+        </a>
+    </div>
+</div>
+</div>
+<footer>
+  <p class="tiga"> &copy; 2024 The Mavericks. All rights reserved.</p>
+</footer>
+</body>
+</html>

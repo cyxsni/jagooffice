@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eksplorasi Fitur Tab Menu di Microsoft Excel
+</title>
+<style>
+    body {
+      font-family: sans-serif;
+      background-color: #f8fafc;
+      margin: 0;
+      padding: 0;
+    }
+    p {
+      font-size: 50px;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      color: #334155;
+    }
+    h1 {
+      font-size: 80px;
+      color: #334155;
+    }
+    .dua {
+        font-size: 25px;
+        text-align: justify;
+    }
+    .container {
+      display: flex;
+      justify-content: space-between;
+      padding: 25px;
+    }
+    .article {
+      width: 68%; /* Mengubah lebar untuk memberi ruang lebih pada sidebar */
+      padding: 40px;
+      background-color: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    .sidebar {
+      width: 25%; /* Mengatur lebar sidebar */
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    .article-title {
+      font-size: 55px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .article-content {
+      margin-bottom: 20px;
+    }
+    .sidebar-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .sidebar-item {
+      margin-bottom: 10px;
+    }
+    .sidebar-item-title {
+      font-weight: bold;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+    .sidebar-item-title:hover {
+      color: #1e3a8a;
+    }
+    .sidebar-item-content {
+      margin-top: 5px;
+    }
+    .article-image {
+      width: 70%; /* Memastikan gambar mengisi lebar artikel */
+      height: auto;
+      
+    }
+    
+
+/* Navbar */
+.navbar {
+    background-color: #004d40;
+    color: white;
+    padding: 8px 0px; /* Reduced padding */
+}
+
+.cont {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+.logo {
+    font-size: 25px;
+    color: white;
+}
+/* Dropdown Submenu */
+.dropdown:hover .submenu {
+    display: block;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #004d40;
+    list-style: none;
+    padding: 10px 0;
+}
+
+.submenu li {
+    width: 200px;
+}
+
+.submenu li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.submenu li a:hover {
+    background-color: #00897b;
+}
+
+.satu {
+        font-size: 18px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: #334155;
+        text-align: justify;
+}
+
+footer {
+  background-color: #004d40;
+  color: white;
+  text-align: center;
+  padding: 0.5rem 0; /* Mengurangi padding untuk membuatnya lebih kecil */
+  font-size: 0.85rem; /* Mengurangi ukuran font */
+  margin-top: 20px; /* Menambahkan margin agar ada sedikit ruang antara footer dan konten utama */
+  
+}
+
+.tiga {
+  color: #ffffff;
+  font-size: 20px;
+}
+
+    
+  </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="cont">
+                <div class="logo">
+                    <p class="logo">Jago Office</p>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                    <a href="#">Tutorial</a>
+                    <ul class="submenu">
+                        <li><a href="msword.html">MS Word</a></li>
+                        <li><a href="msexcel.html">MS Excel</a></li>
+                        <li><a href="mspp.html">MS PowerPoint</a></li>
+                        <li><a href="msaccess.html">MS Access</a></li>
+                    </ul>
+                </li>
+                <li><a href="aboutUs.html">About Us</a></li>
+                </ul>
+                
+                </div>
+            </div>
+        </nav>
+    </header>
+  <div class="container">
+    <div class="article">
+      <h1 class="article-title">Eksplorasi Fitur Tab Menu di Microsoft Excel</h1>
+      
+      <div class="article-content">
+        <p class="dua">Microsoft Excel adalah aplikasi perangkat lunak lembar kerja (spreadsheet) yang dikembangkan oleh Microsoft. Excel memungkinkan pengguna untuk mengolah dan menghitung data numerik dengan menggunakan berbagai rumus dan fungsi yang tersedia, menjadikannya alat yang sangat berguna dalam berbagai bidang, termasuk akuntansi, analisis data, dan perencanaan keuangan.</p>
+        <p class="dua">Mengenal Worksheet </p>
+        <img src="tms/tabmenuexcel.jpg" alt="Excel" class="article-image">
+        <p class="dua">1.	Row  atau baris, adalah bagian dari worksheet yang melintang secara horizontal dari kiri ke kanan dan ditandai dengan angka, mulai dari 1. Setiap baris memiliki nomor unik yang memudahkan pengguna dalam mengidentifikasi lokasi data di dalam spreadsheet.</p>
+        <p class="dua">2.	Column atau kolom adalah bagian dari worksheet yang melintang secara vertikal dari atas ke bawah, ditandai dengan huruf, mulai dari A hingga XFD, yang mencakup 16.384 kolom. Kolom membantu dalam pengorganisasian data secara vertikal.</p>
+        <p class="dua">3.	Cell atau  Sel adalah pertemuan antara row dan column  Setiap sel memiliki alamat unik yang ditentukan oleh kombinasi kolom dan barisnya, misalnya, sel C5 merujuk pada pertemuan kolom C dan baris 5. Sel digunakan untuk memasukkan data, baik teks maupun angka.</p>
+        <p class="dua">4.	Range atau rentang adalah kumpulan beberapa cell yang dapat terdiri dari satu atau lebih baris dan kolom. Contohnya, rentang A1:B2 mencakup sel A1, A2, B1, dan B2. Rentang digunakan untuk melakukan operasi pada sekelompok data sekaligus. </p>
+        <br> <br> <br>
+        
+    </div>
+    </div>
+    <div class="sidebar">
+      <h2 class="sidebar-title">Artikel Terkait</h2>
+      <div class="sidebar-item">
+        <a href="tme1.html" class="sidebar-item-title">Belajar Microsoft Excel: Penggunaan Fungsi Sum dan Average</a>
+      </div>
+      <div class="sidebar-item">
+        <a href="tme2.html" class="sidebar-item-title">Belajar Microsoft Excel: Penggunaan Fungsi MAX dan MIN</a>
+      </div>
+      <div class="sidebar-item">
+        <a href="tme3.html" class="sidebar-item-title">Belajar Microsoft Excel: Penggunaan Fungsi COUNT dan COUNT IF</a>
+      </div>
+      <div class="sidebar-item">
+        <a href="tme4.html" class="sidebar-item-title">Belajar Microsoft Excel: Penggunaan Fungsi Absolut</a>
+      </div>
+      <div class="sidebar-item">
+      <a href="tme5.html" class="sidebar-item-title">Belajar Microsoft Excel: Cara Membuat Grafik</a>
+      </div>
+      <div class="sidebar-item">
+        <a href="tme6.html" class="sidebar-item-title">Belajar Microsoft Excel: Penggunaan Fungsi Upper, Lower, Proper & Trim</a>
+      </div>
+</div>
+</div>
+<footer>
+  <p class="tiga"> &copy; 2024 The Mavericks. All rights reserved.</p>
+</footer>
+</body>
+</html>

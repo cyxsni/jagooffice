@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belajar Microsoft Access: Pengenalan Dasar tentang Database</title>
+  <style>
+   
+    body {
+      font-family: sans-serif;
+      background-color: #f8fafc;
+      margin: 0;
+      padding: 0;
+    }
+    p {
+      font-size: 25px;
+      
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      color: #334155;
+    }
+    h1 {
+      font-size: 20px;
+      color: #334155;
+    }
+    .dua {
+      font-size: 20px;
+      text-align: justify;
+    }
+    .container {
+  display: flex;
+  flex-direction: column; /* Menambahkan ini untuk membuat artikel dan sidebar menjadi kolom */
+  padding: 10px;
+  margin-top: 50px;
+  border-radius: 20px;
+}
+.sidebar {
+  width: 95%; /* Lebar sidebar */
+  padding: 40px;
+  margin-top: 20px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.article {
+  width: 95%; /* Lebar artikel */
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.article-cover {
+  width: 50%; /* Membuat gambar mengisi lebar penuh */
+  height: auto; /* Menjaga proporsi gambar */
+  border-radius: 20px 20px 0 0; /* Memberikan efek sudut melengkung pada bagian atas gambar */
+}
+    .article-title {
+      font-size: 25px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .article-content {
+      margin-bottom: 20px;
+    }
+    .sidebar-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .sidebar-item {
+      margin-bottom: 10px;
+    }
+    .sidebar-item-title {
+      font-weight: bold;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+    .sidebar-item-title:hover {
+      color: #1e3a8a;
+    }
+    .sidebar-item-content {
+      margin-top: 5px;
+    }
+    .article-image {
+  width: 500px; /* Lebar gambar ditentukan dalam piksel */
+  height: auto;
+}
+    /* Navbar */
+    .navbar {
+    background-color: #004d40;
+    color: white;
+    padding:  0;
+    position:fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+    .cont {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    .nav-links li {
+      position: relative;
+    }
+    .nav-links li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+    .logo {
+      font-size: 25px;
+      color: white;
+    }
+    /* Dropdown Submenu */
+    .dropdown:hover .submenu {
+      display: block;
+    }
+    .submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #004d40;
+      list-style: none;
+      padding: 10px 0;
+    }
+    .submenu li {
+      width: 200px;
+    }
+    .submenu li a {
+      display: block;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: white;
+    }
+    .submenu li a:hover {
+      background-color: #00897b;
+    }
+
+    footer {
+  background-color: #004d40;
+  color: white;
+  text-align: center;
+  padding: 0.5rem 0; /* Mengurangi padding */
+  font-size: 0.85rem; /* Mengurangi ukuran font */
+  margin-top: 20px;
+  max-width: 100%; /* Menetapkan lebar maksimum untuk footer */
+  margin: 0 auto; /* Memusatkan footer */
+}
+
+.tiga {
+  color: #ffffff;
+  font-size: 20px;
+}
+
+  </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="cont">
+                <div class="logo">
+                    <p class="logo">Jago Office</p>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                    <a href="#">Tutorial ▼</a>
+                    <ul class="submenu">
+                        <li><a href="msword.html">MS Word</a></li>
+                        <li><a href="msexcel.html">MS Excel</a></li>
+                        <li><a href="mspp.html">MS PowerPoint</a></li>
+                        <li><a href="msaccess.html">MS Access</a></li>
+                    </ul>
+                </li>
+                <li><a href="aboutUs.html">About Us</a></li>
+                </ul>
+                
+                </div>
+            </div>
+        </nav>
+    </header>
+  <div class="container">
+    <div class="article">
+      <h1 class="article-title">Belajar Microsoft Access: Pengenalan Dasar tentang Database</h1>
+         
+          <img src="pict4.jpg" alt="Access" class="article-image">
+          <div class="article-content">
+            <br> <br> 
+            
+            <p class="dua"><strong>Database</strong> adalah sekumpulan data yang memiliki nilai informasi, disimpan dalam komputer, 
+                dan saling terhubung dengan cara yang teratur.</p>
+            <p class="dua"><ul>
+                <li class="satu">Data adalah fakta yang belum diolah, bisa berupa informasi dalam bentuk kertas 
+                    atau digital.</li>
+                <li class="satu">Informasi adalah hasil dari pengolahan data sehingga menjadi lebih berarti dan memberikan penjelasan.</li>
+            </ul> </p>
+
+            <p class="dua">Manfaat Database</p>
+            <p class="dua">
+              <ul>
+                  <li class="satu">Menghindari Redundansi: Database membantu mencegah pengulangan data yang tidak perlu.</li>
+                  <li class="satu">Menjaga Integritas Data: Data yang disimpan tetap akurat dan konsisten.</li>
+                  <li class="satu">Independensi Data: Data dapat diubah tanpa mempengaruhi aplikasi yang menggunakannya.</li>
+                  <li class="satu">Kemudahan Berbagi: Memudahkan untuk berbagi data dengan pengguna lain.</li>
+                  <li class="satu">Keamanan Data: Database dapat dilindungi agar hanya orang tertentu yang bisa mengaksesnya.</li>
+                  <li class="satu">Akses Data yang Mudah: Mempermudah pengguna dalam mencari dan mengambil data yang diperlukan.</li>
+              </ul>
+          </p>
+
+            <p class="dua">Fungsi Database</p>
+            <ul> 
+                <li class="satu">Pengelompokan Data: Memudahkan dalam memahami data yang ada.</li>   
+                <li class="satu">Menghindari Pengulangan: Membantu mencegah terjadinya data yang sama berulang kali.</li>
+                <li class="satu">Pengelolaan Data: Memudahkan proses menyimpan, mengedit, dan menghapus data.</li>
+                <li class="satu">Menjamin Integritas: Memastikan bahwa data tetap valid dan akurat.</li>
+                <li class="satu">Solusi Penyimpanan: Memfasilitasi penyimpanan data, terutama yang berukuran besar.</li>
+                <li class="satu">Mendukung Aplikasi: Menyediakan penyimpanan yang diperlukan untuk aplikasi yang membutuhkan data.</li>
+            </ul>
+
+            <p class="dua">Komponen Database</p>
+            <ul>
+                <li class="satu">Data: Informasi yang disimpan.</li>
+                <li class="satu">Hardware: Perangkat fisik yang digunakan untuk menyimpan dan mengakses data.</li> 
+                <li class="satu">Software: Program yang digunakan untuk mengelola database.</li>
+                <li class="satu">User: Orang yang menggunakan database.</li>
+                <li class="satu">End User: Pengguna akhir yang memanfaatkan data yang ada.</li>
+            </ul>
+
+            <p class="dua">Jenis-Jenis Software Database</p>
+            <ol>
+                <li class="satu">Microsoft Access.</li>
+                <li class="satu">Oracle.</li>
+                <li class="satu">MS SQL Server.</li>
+                <li class="satu">MySQL.</li>
+                <li class="satu">PostgreSQL.</li>
+            </ol>
+
+            <p class="dua">Tingkatan Database di Access</p>
+            <ul>
+                <li class="satu">Database: Kumpulan data secara keseluruhan.</li>
+                <li class="satu">File: Terdiri dari beberapa record yang menggambarkan data sejenis.</li> 
+                <li class="satu">Record: Kumpulan field yang saling berhubungan, disimpan dalam baris tabel. Satu tabel bisa memiliki banyak record.</li>
+                <li class="satu">Field: Kolom dalam tabel yang menyimpan data sejenis.</li>
+                <li class="satu">Character: Unit terkecil dari data, bisa berupa huruf, angka, atau simbol yang membentuk item dalam field.</li>
+            </ul>
+            <img src="tma/a1.png" alt="Access" class="article-image">
+        </div>
+    </div>
+
+    <div class="sidebar">
+    <h2 class="sidebar-title">Artikel Terkait</h2>
+    <div class="sidebar-item">
+        <a href="tma2.html" class="sidebar-item-title">Belajar Microsoft Access: Pengenalan Dasar untuk Pemula</a>
+        </div>
+    <div class="sidebar-item">
+        <a href="tma3.html" class="sidebar-item-title">Belajar Microsoft Access: Membuat Tabel</a>
+        </div>
+</div>
+</div>
+
+<div class="container-top">
+  <a href="#" class="top"></a>
+</div>
+
+  <footer>
+    <p class="tiga"> &copy; 2024 The Mavericks. All rights reserved.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,154 @@
+/* General Styles */
+body, h1, h2, h3, p, a {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #0d1f2d;
+    color: #334155;
+    font-size: 16px;
+}
+
+a {
+    color: #00bfa5;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #00897b;
+}
+
+.navbar {
+    background-color: #004d40;
+    padding: 12px 0;
+}
+
+.cont {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links li a {
+    color: white;
+    font-size: 1rem;
+}
+
+.logo {
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+}
+
+/* Dropdown Submenu */
+.dropdown:hover .submenu {
+    display: block;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #004d40;
+    list-style: none;
+    padding: 10px 0;
+}
+
+.submenu li a {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+}
+
+.submenu li a:hover {
+    background-color: #00897b;
+}
+
+/* Tutorial Section */
+.tutorial-section {
+    padding: 3rem 0;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.tutorial-section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    color: #0d1f2d;
+}
+
+.section-description {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #65748b;
+}
+
+.tutorial-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 0 2rem;
+}
+
+.tutorial-item {
+    background-color: #1a374d;
+    padding: 1.5rem;
+    border-radius: 8px;
+    color: #eaeaea;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tutorial-item:hover {
+    background-color: #00897b;
+    transform: translateY(-5px);
+}
+
+.tutorial-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.tutorial-item p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.tutorial-item .btn {
+    background-color: #d32f2f;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.tutorial-item .btn:hover {
+    background-color: #c50000;
+}
+
+/* Footer */
+footer {
+    background-color: #004d40;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+}

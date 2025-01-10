@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belajar Microsoft Word: Cara Mengubah Font, Ukuran, Warna, Bold Italic Underline, dan Tata Letak!</title>
+  <style>
+   
+    body {
+      font-family: sans-serif;
+      background-color: #f8fafc;
+      margin: 0;
+      padding: 0;
+    }
+    p {
+      font-size: 25px;
+      
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      color: #334155;
+    }
+    h1 {
+      font-size: 20px;
+      color: #334155;
+    }
+    .dua {
+      font-size: 20px;
+      text-align: justify;
+    }
+    .container {
+  display: flex;
+  flex-direction: column; /* Menambahkan ini untuk membuat artikel dan sidebar menjadi kolom */
+  padding: 10px;
+  margin-top: 50px;
+  border-radius: 20px;
+}
+.sidebar {
+  width: 95%; /* Lebar sidebar */
+  padding: 40px;
+  margin-top: 20px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.article {
+  width: 95%; /* Lebar artikel */
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.article-cover {
+  width: 50%; /* Membuat gambar mengisi lebar penuh */
+  height: auto; /* Menjaga proporsi gambar */
+  border-radius: 20px 20px 0 0; /* Memberikan efek sudut melengkung pada bagian atas gambar */
+}
+    .article-title {
+      font-size: 25px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .article-content {
+      margin-bottom: 20px;
+    }
+    .sidebar-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .sidebar-item {
+      margin-bottom: 10px;
+    }
+    .sidebar-item-title {
+      font-weight: bold;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+    .sidebar-item-title:hover {
+      color: #1e3a8a;
+    }
+    .sidebar-item-content {
+      margin-top: 5px;
+    }
+    .article-image {
+  width: 500px; /* Lebar gambar ditentukan dalam piksel */
+  height: auto;
+}
+    /* Navbar */
+    .navbar {
+    background-color: #004d40;
+    color: white;
+    padding:  0;
+    position:fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+    .cont {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    .nav-links li {
+      position: relative;
+    }
+    .nav-links li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+    .logo {
+      font-size: 25px;
+      color: white;
+    }
+    /* Dropdown Submenu */
+    .dropdown:hover .submenu {
+      display: block;
+    }
+    .submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #004d40;
+      list-style: none;
+      padding: 10px 0;
+    }
+    .submenu li {
+      width: 200px;
+    }
+    .submenu li a {
+      display: block;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: white;
+    }
+    .submenu li a:hover {
+      background-color: #00897b;
+    }
+
+    footer {
+  background-color: #004d40;
+  color: white;
+  text-align: center;
+  padding: 0.5rem 0; /* Mengurangi padding */
+  font-size: 0.85rem; /* Mengurangi ukuran font */
+  margin-top: 20px;
+  max-width: 100%; /* Menetapkan lebar maksimum untuk footer */
+  margin: 0 auto; /* Memusatkan footer */
+}
+
+.tiga {
+  color: #ffffff;
+  font-size: 20px;
+}
+
+  </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="cont">
+                <div class="logo">
+                    <p class="logo">Jago Office</p>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                    <a href="#">Tutorial ▼</a>
+                    <ul class="submenu">
+                        <li><a href="msword.html">MS Word</a></li>
+                        <li><a href="msexcel.html">MS Excel</a></li>
+                        <li><a href="mspp.html">MS PowerPoint</a></li>
+                        <li><a href="msaccess.html">MS Access</a></li>
+                    </ul>
+                </li>
+                <li><a href="aboutUs.html">About Us</a></li>
+                </ul>
+                
+                </div>
+            </div>
+        </nav>
+    </header>
+  <div class="container">
+    <div class="article">
+      
+      <h1 class="article-title">Belajar Microsoft Word: Cara Mengubah Font, Ukuran, Warna, Bold Italic Underline, dan Tata Letak!</h1>
+            <div class="article-content">
+        <p class="dua">Anda akan belajar cara mengubah font, ukuran, dan warna teks, serta bagaimana menambahkan gaya seperti bold, italic, dan underline untuk menekankan informasi penting. Selain itu, kami juga akan menjelaskan cara mengatur tata letak teks dan paragraf, serta mengatur jarak antar baris untuk meningkatkan keterbacaan dokumen Anda. Dengan mengikuti tutorial ini, Anda akan dapat membuat dokumen yang lebih profesional dan menarik perhatian pembaca. Mari kita mulai dan eksplorasi berbagai cara untuk memaksimalkan penggunaan Microsoft Word!</p>
+        
+        <p>Cara Mengubah Font</p>
+        <p class="dua">Mengubah font dalam Microsoft Word adalah langkah penting untuk menyesuaikan tampilan dokumen Anda sesuai dengan kebutuhan dan gaya yang diinginkan. Dalam bagian ini, Anda akan belajar cara memilih dan menerapkan berbagai jenis font untuk membuat teks Anda lebih menarik dan mudah dibaca.</p>
+        <p class="dua">1. Blok Teks yang akan di ubah</p>
+        <p class="dua">2. Pilih Font sesuai kebutuhan seperti pada contoh gambar berikut pada tanda panah</p>
+        <img src="image/1.png" alt="Word" class="article-image">
+        <br> <br> <br>
+
+        <p>Cara Mengubah Ukuran Font</p>
+        <p class="dua">Mengubah ukuran font dalam Microsoft Word memungkinkan Anda untuk menekankan informasi penting dan meningkatkan keterbacaan dokumen. Di bagian ini, Anda akan mempelajari langkah-langkah sederhana untuk menyesuaikan ukuran teks sesuai dengan kebutuhan presentasi atau gaya penulisan Anda.</p>
+        <p class="dua">1. Blok Teks yang akan di ubah</p>
+        <p class="dua">2. Ubah ukuran font sesuai kebutuhan seperti pada contoh gambar berikut pada tanda panah</p>
+        <img src="image/2.png" alt="Word" class="article-image">
+        <br> <br> <br>
+         
+        <p>Cara Mengubah Warna Teks</p>
+        <p class="dua">Mengubah warna teks dalam Microsoft Word dapat memberikan sentuhan visual yang menarik dan membantu menekankan informasi penting dalam dokumen Anda. Dalam bagian ini, Anda akan belajar cara memilih dan menerapkan berbagai warna untuk meningkatkan daya tarik dan keterbacaan teks Anda.</p>
+        <p class="dua">1. Blok Teks yang akan di ubah</p>
+        <p class="dua">2. Ubah warna teks sesuai kebutuhan seperti pada contoh gambar berikut pada tanda panah</p>
+        <img src="image/3.png" alt="Word" class="article-image">
+        <br> <br> <br>
+
+        <p>Cara Mengubah Teks Menjadi <strong>Bold</strong>, <i>Italic</i>, <u>Underline</u></p>
+        <p class="dua">Menambahkan efek bold, italic, dan underline pada teks di Microsoft Word adalah cara yang efektif untuk menekankan informasi penting dan memberikan variasi pada dokumen Anda. Dalam bagian ini, Anda akan belajar cara cepat dan mudah untuk menerapkan gaya-gaya ini pada teks Anda, sehingga dokumen terlihat lebih menarik dan profesional.</p>
+        <p class="dua">1. Blok Teks yang akan di ubah</p>
+        <p class="dua">2. Ubah Teks sesuai kebutuhan seperti pada contoh gambar berikut pada kotak yang sesuai warna</p>
+        <img src="image/4.png" alt="Word" class="article-image">
+        <br> <br> <br>
+
+        <p>Cara Mengubah Tata Letak Teks (Alignment)</p>
+        <p class="dua">Mengubah tata letak teks atau alignment dalam Microsoft Word sangat penting untuk menciptakan struktur yang rapi dan menarik dalam dokumen Anda. Dalam bagian ini, Anda akan belajar bagaimana mengatur posisi teks, baik itu rata kiri, rata tengah, rata kanan, atau justify, untuk meningkatkan tampilan dan keterbacaan dokumen Anda.</p>
+        <p class="dua">1. Blok Teks yang akan di ubah</p>
+        <p class="dua">2. Ubah Teks sesuai kebutuhan seperti pada contoh gambar berikut dengan cara klik sesuai warna tanda panah</p>
+        <img src="image/5.png" alt="Word" class="article-image">
+        <br> <br> <br>
+
+        <p>Cara Mengubah Indentasi Paragraf</p>
+        <p class="dua">Mengubah indentasi paragraf dalam Microsoft Word membantu Anda mengatur tata letak teks agar lebih rapi dan terstruktur. Dalam bagian ini, Anda akan belajar cara menyesuaikan indentasi untuk meningkatkan estetika dan keterbacaan dokumen Anda.</p>
+        <p class="dua">1. Blok seluruh teks</p>
+        <p class="dua">2. Geser ruler pada bagian atas seperti pada gambar yang di beri tanda panah agar baris pertama pada paragraph menjorok ke kanan</p>
+        <img src="image/6.png" alt="Word" class="article-image">
+        <br> <br> <br>
+
+        <p>Cara Mengatur Jarak Antar Baris</p>
+        <p class="dua">Mengatur jarak antar baris dalam Microsoft Word sangat penting untuk meningkatkan keterbacaan dan estetika dokumen Anda. Dalam bagian ini, Anda akan belajar cara menyesuaikan jarak antar baris agar teks terlihat lebih rapi dan nyaman dibaca.</p>
+        <p class="dua">1. Blok seluruh teks</p>
+        <p class="dua">2. Pilih ukuran jarak baris </p>
+        <img src="image/7.png" alt="Word" class="article-image">
+        <br> <br> <br>
+    </div>
+    </div>
+    
+    <div class="sidebar">
+      <h2 class="sidebar-title">Artikel Terkait</h2>
+      
+      <div class="sidebar-item">
+          <a href="tms2.html" class="sidebar-item-title">Belajar Microsoft Word: Cara Mudah Membuat Nomor Halaman dengan Header dan Footer</a>
+          </div>
+          <div class="sidebar-item">
+          <a href="tms3.html" class="sidebar-item-title">Belajar Microsoft Word: Cara Memasukkan Gambar ke dalam Dokumen dengan Mudah</a>
+          </div>
+  </div>
+  </div>
+  <footer>
+    <p class="tiga"> &copy; 2024 The Mavericks. All rights reserved.</p>
+  </footer>
+</body>
+</html>
